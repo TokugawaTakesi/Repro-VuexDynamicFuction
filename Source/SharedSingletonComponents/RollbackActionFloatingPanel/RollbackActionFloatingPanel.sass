@@ -1,0 +1,54 @@
+.RollbackActionFloatingPanel
+
+  $Width: 640px
+  $Height: 80px
+
+  display: flex
+  align-items: center
+
+  position: fixed
+  left: calc(0.5*(100% - #{$Width}))
+  bottom: 50px
+  z-index: $ZIndex-RollbackActionFloatingPanel
+
+  width: $Width
+  height: $Height
+  border-radius: 0.5*$Height
+  padding: 0 16px
+
+  background: white
+  box-shadow: 0 0 12px 4px rgba(black, 0.25)
+
+  &:hover
+    box-shadow: 0 0 16px 6px rgba(black, 0.25)
+    transition: box-shadow 0.5s
+
+
+  &-CheckmarkIcon
+    width: 36px
+    height: 36px
+    >path
+      fill: $Green--ThemeColor
+
+  &-Text
+    margin-left: 12px
+    +FontSizeAndRowHeightWithoutExtraSpaceCausedByLineHeight(18px, 22px)
+    font-weight: bold
+    color: $Green--ThemeColor
+
+  &-Button
+
+    +RegularButton
+    +ButtonWithPrependedIcon
+
+    margin-left: auto
+
+    &-Icon
+      width: 24px
+      height: 24px
+      margin-right: 4px
+      >path
+        fill: white
+
+    &+.RollbackActionFloatingPanel-Button
+      margin-left: 8px

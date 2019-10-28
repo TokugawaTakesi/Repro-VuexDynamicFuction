@@ -1,0 +1,63 @@
+@import ../node_modules/hikari-frontend/Styles/_1-Hikari-Assets
+
+@import Styles/_Variables
+
+@import ../node_modules/hikari-frontend/Styles/_2-Hikari-Kernel
+@import ../node_modules/hikari-frontend/Styles/_3-Hikari-CssRules
+@import ../node_modules/hikari-frontend/Styles/_4-UiComponents
+
+@import Styles/_Layout
+@import Styles/_Design
+
+@import SharedReusableComponents/Buttons/Buttons
+@import SharedReusableComponents/Links/Links
+@import SharedSingletonComponents/RollbackActionFloatingPanel/RollbackActionFloatingPanel
+
+
+.SplitView
+
+  display: flex
+  flex: 1 1 auto
+  overflow-y: hidden
+  margin-top: 12px
+
+  &-Section
+
+    display: flex
+    flex-direction: column
+    flex: 0 0 50%
+    overflow-y: hidden
+
+    &:first-child
+      padding-right: 12px
+    &:nth-child(2)
+      padding-left: 12px
+
+    &-Heading
+      flex: 0 0 auto
+      margin-bottom: 12px
+      font-size: 16px
+
+.CardsLayout
+  flex: 1 1 auto
+  padding: 6px
+  overflow-y: auto
+
+.CardView
+  display: flex
+  justify-content: space-between
+  padding: 8px 8px
+  box-shadow: 0 0 4px 4px rgba(black, 0.25)
+  background: white
+  user-select: none
+  cursor: grab
+
+  &:active
+    cursor: grabbing
+
+  &+&
+    margin-top: 12px
+
+  &-LinkButton
+    @include RegularLink
+    font-size: 14px

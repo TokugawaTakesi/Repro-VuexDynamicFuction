@@ -1,0 +1,88 @@
+$Button-BasicColor__Primary: #FD766C;
+$Button-BasicColor__Secondary: #555555;
+
+@mixin RegularButton {
+
+  @include Button-BasicRules;
+  @include Button-HeightSizing__Fixed($Height: $ButtonsAndInputFieldsCommonHeight, $FontSize: 12px);
+  @include Button-WidthSizing__Natural($SidePadding: 32px);
+
+  border-radius: 4px;
+  font-weight: bold;
+
+  @include Button-Coloration__NoBorder(
+    $backgroundColor-normalState: $Button-BasicColor__Secondary,
+    $fontColor-normalState: white,
+    $backgroundColor-hoverState: lighten($Button-BasicColor__Secondary, 5%),
+    $fontColor-hoverState: white,
+    $backgroundColor-activeState: #fee140,
+    $fontColor-activeState: gray,
+    $backgroundColor-disabledState: lightgray,
+    $fontColor-disabledState: #FFFFFF
+  );
+
+  &__Primary {
+    @include Button-Coloration__NoBorder(
+      $backgroundColor-normalState: $Button-BasicColor__Primary,
+      $fontColor-normalState: white,
+      $backgroundColor-hoverState: lighten($Button-BasicColor__Primary, 5%),
+      $fontColor-hoverState: white,
+      $backgroundColor-activeState: #fee140,
+      $fontColor-activeState: gray,
+      $backgroundColor-disabledState: lightgray,
+      $fontColor-disabledState: #FFFFFF
+    );
+  }
+}
+
+@mixin ButtonWithPrependedIcon {
+
+  @include Button-BasicRules;
+  @include Button-Flex;
+  @include Button-HeightSizing__Natural($FontSize: 12px, $VerticalPadding: 6px);
+  @include Button-WidthSizing__Natural($SidePadding: 16px);
+
+  border-radius: 4px;
+  font-weight: bold;
+
+  @include Button-Coloration__NoBorder(
+    $backgroundColor-normalState: $Button-BasicColor__Secondary,
+    $fontColor-normalState: white,
+    $backgroundColor-hoverState: lighten($Button-BasicColor__Secondary, 5%),
+    $fontColor-hoverState: white,
+    $backgroundColor-activeState: #fee140,
+    $fontColor-activeState: gray,
+    $backgroundColor-disabledState: lightgray,
+    $fontColor-disabledState: #FFFFFF
+  );
+
+  &__Primary {
+    @include Button-Coloration__NoBorder(
+            $backgroundColor-normalState: $Button-BasicColor__Primary,
+            $fontColor-normalState: white,
+            $backgroundColor-hoverState: lighten($Button-BasicColor__Primary, 5%),
+            $fontColor-hoverState: white,
+            $backgroundColor-activeState: #fee140,
+            $fontColor-activeState: gray,
+            $backgroundColor-disabledState: lightgray,
+            $fontColor-disabledState: #FFFFFF
+    );
+  }
+
+  >.ButtonWithPrependedIcon-Icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    >path {
+      fill: white;
+    }
+  }
+
+  &:active {
+    >.ButtonWithPrependedIcon-Icon {
+      >path {
+        fill: gray;
+      }
+    }
+  }
+}

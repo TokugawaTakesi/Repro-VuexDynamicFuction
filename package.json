@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "scripts": {
+    "JavaScriptBuild": "webpack-dev-server",
+    "PreProcessStyles": "node-sass --indented-syntax Source/Styles.sass --output ./"
+  },
+  "devDependencies": {
+    "@types/node": "12.7.5",
+    "@typescript-eslint/eslint-plugin": "2.3.2",
+    "@typescript-eslint/parser": "2.3.2",
+    "eslint": "5.16.0",
+    "eslint-plugin-vue": "5.2.3",
+    "tslint": "5.20.0",
+    "typescript": "3.6.3",
+    "vue-eslint-parser": "6.0.4",
+    "vue-property-decorator": "8.2.2",
+    "vuex-module-decorators": "0.10.1",
+    "webpack-cli": "3.3.8",
+    "webpack-dev-server": "3.9.0"
+  },
+  "dependencies": {
+    "acorn": "7.0.0",
+    "css-loader": "3.2.0",
+    "fork-ts-checker-webpack-plugin": "1.6.0",
+    "hikari-es-extensions": "0.0.4",
+    "hikari-frontend": "0.0.6",
+    "html-loader": "0.5.5",
+    "node-sass": "4.12.0",
+    "pug-html-loader": "1.1.5",
+    "pug-plain-loader": "1.0.0",
+    "sass": "1.23.0",
+    "sass-loader": "8.0.0",
+    "style-loader": "1.0.0",
+    "stylus": "0.54.7",
+    "stylus-loader": "3.0.2",
+    "ts-loader": "6.1.0",
+    "vue": "2.6.10",
+    "vue-fragment": "1.5.1",
+    "vue-loader": "15.7.1",
+    "vue-style-loader": "4.1.2",
+    "vue-template-compiler": "2.6.10",
+    "vuedraggable": "2.23.0",
+    "vuex": "3.1.1",
+    "webpack": "4.40.2"
+  }
+}

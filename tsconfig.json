@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+
+    "target": "es5",
+    "strict": true,
+
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    "experimentalDecorators": true,
+
+    "baseUrl": "./",
+    "paths": {
+
+      "@SourceFiles:Root/*": ["./Source/*"],
+      "@Store/*": ["./Source/Store/*"]
+    },
+
+    "noUnusedParameters": true,
+    "noImplicitReturns": true
+  }
+}

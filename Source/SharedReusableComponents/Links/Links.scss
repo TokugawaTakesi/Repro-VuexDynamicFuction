@@ -1,0 +1,18 @@
+@mixin RegularLink {
+
+  @include Link-BasicRules;
+  @include Link-Settings__Underlined;
+
+  @include Link__Underlined-Coloration__Simple(
+    $fontColor-normalState: $Pink--ThemeColor,
+    $underlineColor-normalState: $Pink--ThemeColor,
+    $fontColor-hoverState: $Peach--ThemeColor,
+    $underlineColor-hoverState: $Peach--ThemeColor,
+    $fontColor-activeState: gold,
+    $underlineColor-activeState: gold,
+    $fontColor-visitedState: $Pink--ThemeColor,
+    $underlineColor-visitedState: $Pink--ThemeColor,
+    $fontColor-disabledState: $ShadeOfGray-20,
+    $underlineColor-disabledState: $ShadeOfGray-20
+  )
+}

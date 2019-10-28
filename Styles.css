@@ -1,0 +1,304 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+  a img {
+    border: none; }
+
+blockquote, q {
+  quotes: none; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: ''; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: none; }
+
+input {
+  box-shadow: none; }
+
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-size: 1rem;
+  line-height: 1; }
+
+sub {
+  vertical-align: sub;
+  font-size: smaller; }
+
+body {
+  overflow: hidden; }
+
+.Layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+  .Layout-MainContent {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #FFF7F7;
+    padding: 0 12px; }
+
+.RollbackActionFloatingPanel {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: calc(0.5*(100% - 640px));
+  bottom: 50px;
+  z-index: 40;
+  width: 640px;
+  height: 80px;
+  border-radius: 40px;
+  padding: 0 16px;
+  background: white;
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.25); }
+  .RollbackActionFloatingPanel:hover {
+    box-shadow: 0 0 16px 6px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.5s; }
+  .RollbackActionFloatingPanel-CheckmarkIcon {
+    width: 36px;
+    height: 36px; }
+    .RollbackActionFloatingPanel-CheckmarkIcon > path {
+      fill: lightseagreen; }
+  .RollbackActionFloatingPanel-Text {
+    margin-left: 12px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    color: lightseagreen; }
+    .RollbackActionFloatingPanel-Text:before {
+      content: '';
+      display: block;
+      margin-top: -2px; }
+    .RollbackActionFloatingPanel-Text:after {
+      content: '';
+      display: block;
+      margin-bottom: -2px; }
+  .RollbackActionFloatingPanel-Button {
+    border-radius: 0;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    height: 36px;
+    padding-top: calc(0.5*(36px - 12px));
+    padding-bottom: calc(0.5*(36px - 12px));
+    font-size: 12px;
+    line-height: 12px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    background: #555555;
+    color: white;
+    border-radius: 0;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 12px;
+    line-height: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: none;
+    background: #555555;
+    color: white;
+    margin-left: auto; }
+    .RollbackActionFloatingPanel-Button::-webkit-search-decoration {
+      display: none; }
+    .RollbackActionFloatingPanel-Button:focus {
+      outline-offset: -2px;
+      outline: 0; }
+    .RollbackActionFloatingPanel-Button:disabled {
+      cursor: not-allowed; }
+    .RollbackActionFloatingPanel-Button:hover {
+      background: #626262;
+      color: white; }
+    .RollbackActionFloatingPanel-Button:active {
+      background: #fee140;
+      color: gray; }
+    .RollbackActionFloatingPanel-Button:disabled, .RollbackActionFloatingPanel-Button.Link__Disabled--Hikari {
+      background: lightgray;
+      color: #FFFFFF; }
+    .RollbackActionFloatingPanel-Button__Primary {
+      border: none;
+      background: #FD766C;
+      color: white; }
+      .RollbackActionFloatingPanel-Button__Primary:hover {
+        background: #fd8d85;
+        color: white; }
+      .RollbackActionFloatingPanel-Button__Primary:active {
+        background: #fee140;
+        color: gray; }
+      .RollbackActionFloatingPanel-Button__Primary:disabled, .RollbackActionFloatingPanel-Button__Primary.Link__Disabled--Hikari {
+        background: lightgray;
+        color: #FFFFFF; }
+    .RollbackActionFloatingPanel-Button::-webkit-search-decoration {
+      display: none; }
+    .RollbackActionFloatingPanel-Button:focus {
+      outline-offset: -2px;
+      outline: 0; }
+    .RollbackActionFloatingPanel-Button:disabled {
+      cursor: not-allowed; }
+    .RollbackActionFloatingPanel-Button:hover {
+      background: #626262;
+      color: white; }
+    .RollbackActionFloatingPanel-Button:active {
+      background: #fee140;
+      color: gray; }
+    .RollbackActionFloatingPanel-Button:disabled, .RollbackActionFloatingPanel-Button.Link__Disabled--Hikari {
+      background: lightgray;
+      color: #FFFFFF; }
+    .RollbackActionFloatingPanel-Button__Primary {
+      border: none;
+      background: #FD766C;
+      color: white; }
+      .RollbackActionFloatingPanel-Button__Primary:hover {
+        background: #fd8d85;
+        color: white; }
+      .RollbackActionFloatingPanel-Button__Primary:active {
+        background: #fee140;
+        color: gray; }
+      .RollbackActionFloatingPanel-Button__Primary:disabled, .RollbackActionFloatingPanel-Button__Primary.Link__Disabled--Hikari {
+        background: lightgray;
+        color: #FFFFFF; }
+    .RollbackActionFloatingPanel-Button > .ButtonWithPrependedIcon-Icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px; }
+      .RollbackActionFloatingPanel-Button > .ButtonWithPrependedIcon-Icon > path {
+        fill: white; }
+    .RollbackActionFloatingPanel-Button:active > .ButtonWithPrependedIcon-Icon > path {
+      fill: gray; }
+    .RollbackActionFloatingPanel-Button-Icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 4px; }
+      .RollbackActionFloatingPanel-Button-Icon > path {
+        fill: white; }
+    .RollbackActionFloatingPanel-Button + .RollbackActionFloatingPanel-Button {
+      margin-left: 8px; }
+
+.SplitView {
+  display: flex;
+  flex: 1 1 auto;
+  overflow-y: hidden;
+  margin-top: 12px; }
+  .SplitView-Section {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 50%;
+    overflow-y: hidden; }
+    .SplitView-Section:first-child {
+      padding-right: 12px; }
+    .SplitView-Section:nth-child(2) {
+      padding-left: 12px; }
+    .SplitView-Section-Heading {
+      flex: 0 0 auto;
+      margin-bottom: 12px;
+      font-size: 16px; }
+
+.CardsLayout {
+  flex: 1 1 auto;
+  padding: 6px;
+  overflow-y: auto; }
+
+.CardView {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 8px;
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
+  background: white;
+  user-select: none;
+  cursor: grab; }
+  .CardView:active {
+    cursor: grabbing; }
+  .CardView + .CardView {
+    margin-top: 12px; }
+  .CardView-LinkButton {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding-bottom: 1px;
+    color: #fd746c;
+    border-bottom-color: #fd746c;
+    font-size: 14px; }
+    .CardView-LinkButton.Link__Disabled--Hikari {
+      cursor: not-allowed;
+      pointer-events: none; }
+    .CardView-LinkButton:hover {
+      color: #ff9068;
+      border-bottom-color: #ff9068; }
+    .CardView-LinkButton:active {
+      color: gold;
+      border-bottom-color: gold; }
+    .CardView-LinkButton:visited {
+      color: #fd746c;
+      border-bottom-color: #fd746c; }
+    .CardView-LinkButton.Link__Disabled--Hikari {
+      color: #989898;
+      border-bottom-color: #989898;
+      cursor: not-allowed; }
