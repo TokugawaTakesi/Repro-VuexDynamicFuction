@@ -1,5 +1,9 @@
-# Repro for the question: "Dynamic function for Vuex store module on floating undo bar example
-"
+# Repro for the question: "Dynamic function for Vuex store module on floating undo bar example"
+
+[🌏 Stack Overflow: Dynamic function for Vuex store module on floating undo bar example](https://stackoverflow.com/questions/58515156/dynamic-function-for-vuex-store-module-on-floating-undo-bar-example)
+
+
+
 
 ## Install dependencies and run
 
